@@ -4,6 +4,8 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LineGraph1 } from "../chart1";
+import { LineGraph2 } from "../chart2";
+import { LineGraph3 } from "../chart3";
 
 export const StickyScroll = ({
   content,
@@ -19,8 +21,6 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    // Uncomment the next line and comment the current line if you don't want the overflow container and want to use the entire page scroll
-    // target: ref
     container: ref,
     offset: ["start start", "end start"],
   });
@@ -42,8 +42,8 @@ export const StickyScroll = ({
   });
 
   const backgroundColors = [
-    "var(--slate-900)",
-    "var(--black)",
+    "var(--neutral-900)",
+    "var(--neutral-900)",
     "var(--neutral-900)",
   ];
   const linearGradients = [
@@ -63,16 +63,18 @@ export const StickyScroll = ({
   return (
     <motion.div
       animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+        backgroundColor: backgroundColors[activeCard % backgroundColors.length], 
       }}
       className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10 scrollbar-hidden"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
         <div className="max-w-2xl">
-          {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
-              <LineGraph1 />
+          {[...Array(3)].map((_, index) => (
+            <div key={`graph-${index}`} className="my-20">
+              {index === 0 && <LineGraph1 />}
+              {index === 1 && <LineGraph2 />}
+              {index === 2 && <LineGraph3 />}
             </div>
           ))}
           <div className="h-40" />

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
+import { TrendingUp } from "lucide-react";
+import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 
 import {
   Card,
@@ -10,13 +10,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart"
+} from "@/components/ui/chart";
 const chartData = [
   { month: "January", desktop: 214 },
   { month: "February", desktop: 305 },
@@ -24,16 +24,16 @@ const chartData = [
   { month: "April", desktop: 200 },
   { month: "May", desktop: 100 },
   { month: "June", desktop: 186 },
-]
+];
 
 const chartConfig = {
   desktop: {
     label: "Desktop",
     color: "hsl(var(--chart-1))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
-export function LineGraph1() {
+export function LineGraph2() {
   return (
     <Card>
       <CardHeader>
@@ -81,5 +81,5 @@ export function LineGraph1() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }
