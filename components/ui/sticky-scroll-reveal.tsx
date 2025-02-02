@@ -4,7 +4,7 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LineGraph1 } from "../chart1";
-import { LineGraph2 } from "../chart2";
+import { LineGraph2 } from "@/components/chart2";
 import { LineGraph3 } from "../chart3";
 
 export const StickyScroll = ({
