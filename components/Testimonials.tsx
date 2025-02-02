@@ -79,9 +79,9 @@ export default function Testimonials({
     useRef<HTMLDivElement>(null),
   ];
 
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | null>(null);
   const scrollPositions = useRef([0, 0, 0]);
-  const lastTimestamp = useRef<number>();
+  const lastTimestamp = useRef<number | undefined>(undefined);
 
   const speeds = useMemo(
     () => [

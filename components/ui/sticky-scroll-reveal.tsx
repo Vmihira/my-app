@@ -21,6 +21,8 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
+    // Uncomment the next line and comment the current line if you don't want the overflow container and want to use the entire page scroll
+    // target: ref
     container: ref,
     offset: ["start start", "end start"],
   });
@@ -42,8 +44,8 @@ export const StickyScroll = ({
   });
 
   const backgroundColors = [
-    "var(--neutral-900)",
-    "var(--neutral-900)",
+    "var(--slate-900)",
+    "var(--black)",
     "var(--neutral-900)",
   ];
   const linearGradients = [
@@ -63,7 +65,7 @@ export const StickyScroll = ({
   return (
     <motion.div
       animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length], 
+        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
       className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10 scrollbar-hidden"
       ref={ref}
