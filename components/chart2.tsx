@@ -22,8 +22,6 @@ const chartData = [
   { month: "February", desktop: 305 },
   { month: "March", desktop: 76 },
   { month: "April", desktop: 200 },
-  { month: "May", desktop: 100 },
-  { month: "June", desktop: 186 },
 ];
 
 const chartConfig = {
@@ -37,8 +35,8 @@ export function LineGraph2() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Line Chart - Linear</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Usage Of Video Maker</CardTitle>
+        <CardDescription>January - April 2025</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
