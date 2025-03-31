@@ -326,7 +326,7 @@ export default function PresentationGenerator() {
 
       // Initialize the Google Generative AI client
       const genAI = new GoogleGenerativeAI(
-        "AIzaSyCWbU4uNJqAW-XWYky2z_YH77RAj2Hium4"
+        ""
       );
 
       // Get the model
