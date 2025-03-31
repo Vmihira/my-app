@@ -39,7 +39,7 @@ export function FloatingDockDemo() {
       icon: (
         <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/login",
     },
   ];
   return (
